@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+	<head>
+	    <meta charset="utf-8">
+	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    	<script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    	<link href="//fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.2/tocas.css">
+    	<link rel="stylesheet" type="text/css" href="/styles/simplemde.min.css">
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.2/tocas.js"></script>
+    	<script src="/js/simplemde.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.2/handlebars.min.js"></script>
+        <title>社團評鑑方法│新北市立林口高中</title>
+        <!-- RWD -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script id="hr-template" type="text/x-handlebars-template"></script>
+        <script>$(function(){ ts('.ts.dropdown:not(.basic)').dropdown(); })</script>
+        <style>
+        	.close.item
+			{
+			    display: none !important;
+			}
+			@media (max-width: 767px)
+			{
+			    .stackable.to.left .column
+			    {
+			        text-align: left !important;
+			    }
+			    .close.item
+			    {
+			        display: block !important;
+			    }
+			    #largeMainNav:not(.stackable)
+			    {
+			        display: none;
+			    }
+			}
+        </style>
+        <script>$(function(){ ts('.ts.dropdown:not(.basic)').dropdown(); })</script>
+	</head>
+	
+	<body>
+		<!-- 置頂選單 -->
+        <nav id="largeMainNav" class="ts link inverted fluid large menu">
+            <!-- 縮排容器 -->
+            <div class="ts narrow container">
+                <!-- 主要標誌 -->
+                <a class="brand item" href="index.html">新北市立林口高中</a>
+                
+                <!-- 項目 -->
+                <a class="item" href="event.html">近期活動</a>
+                <div class="ts item dropdown">
+                    <div class="text">
+                        社團介紹
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item" href="index.html#academic">學術</a>
+                        <a class="item" href="index.html#art">藝文</a>
+                        <a class="item" href="index.html#pe">體育</a>
+                        <a class="item" href="index.html#kl">康樂</a>
+                        <a class="item" href="index.html#service">服務</a>
+                    </div>
+                </div>
+                <a class="item" href="evaluation.html">社團評鑑</a>
+                <a class="item" href="about.html">關於網頁</a>
+                <a class="item" href="http://lkca.com.tw">班聯會</a>
+                
+                <!-- 右側選單 -->
+                <div class="right menu">
+                    <a class="close item" onclick="collapseMenu()"><i class="close icon"></i>關閉選單</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- 手機專用置頂選單 -->
+	    <nav id="mobileMainNav" class="ts mobile only link inverted fluid large menu">
+	        
+	        <!-- 縮排容器 -->
+	        <div class="ts narrow container">
+	        
+	            <!-- 主要標誌 -->
+	            <a class="brand item" href="index.html">新北市立林口高中</a>
+	            <!-- / 主要標誌 -->
+	            
+	            <!-- 右側選單 -->
+	            <div class="right menu">
+	                
+	                <!-- 漢堡圖示 -->
+	                <a class="item" style="padding-left: 1em; padding-right: 1em; margin-right: -0.88rem;" onclick="expandMenu()"><i style="margin: 0" class="content icon"></i></a>
+	                <!-- / 漢堡圖示 -->
+	                
+	            </div>
+	            <!-- / 右側選單 -->
+	        
+	        </div>
+	        <!-- / 縮排容器 -->
+	        
+	    </nav>
+	    <!-- / 手機專用置頂選單 -->
+	    
+	    <!-- 選單腳本 -->
+	    <script>
+	        function expandMenu()
+	        {
+	            $('#largeMainNav').addClass('stackable');
+	            $('#mobileMainNav').addClass('hidden');
+	        }
+	        
+	        function collapseMenu()
+	        {
+	            $('#largeMainNav').removeClass('stackable');
+	            $('#mobileMainNav').removeClass('hidden');
+	        }
+	    </script>
+        
+        <header class="ts padded center aligned fluid slate">
+        	<h1 class="ts header">社團評鑑</h1>
+    	</header>
+    	
+    	<!-- 縮排容器 -->
+        <br /><br />
+        <div class="ts narrow container" style="font-size: 16px">
+            
+
+            辦理目的：為促進學生社團活動進步與發展，藉由社團評鑑提昇社團活動及經營品質，以發揮學生活動之教育功能。<br /><br />
+            主辦單位：學務處訓育組。<br /><br />
+            評鑑社團：該學期開辦之所有社團。<br /><br />
+            評鑑內容：<br /><br />
+                <div class="ts bulleted list">
+                    <div class="item">
+                        <div>組織管理：20 %。</div>
+                        <div class="list">
+                            <div class="item"> 組織章程：5 %</div>
+                            <div class="item"> 管理運作：15 %</div>
+                        </div>
+                    </div>    
+                    <div class="item">
+                        <div>社團活動：50 %。</div>
+                        <div class="list">
+                            <div class="item"> 出席：10 %</div>
+                            <div class="item"> 活動執行：40 %</div>
+                        </div>
+                    </div>
+                    <div class="item">活動資料保存與蒐集：10 %。</div>
+                    <div class="item">財務管理：20 %。</div>
+                </div>
+
+        <br /><br />
+  
+            評鑑成績：<br /><br />
+                <div class="ts bulleted list">
+                    <div class="item">優等：90 分以上。</div>
+                    <div class="item">甲等：80─89 分。</div>
+                    <div class="item">乙等：70─79 分。</div>
+                    <div class="item">丙等：60─69 分。</div>
+                    <div class="item">丁等：60 分以下。</div>
+                </div>   
+            <br /><br />
+            獎勵方式：<br /><br />
+                <div class="ts ordered list">
+                    <div class="item">評鑑成績前三名者且成績達 80 分以上者，頒發奬狀乙只。</div>
+                    <div class="item">優等：社長記大功乙次，績優幹部予以記小功兩次鼓勵，並於公開場合予以表揚。</div>
+                    <div class="item">甲等：社長記小功兩次，績優幹部記小功乙次。</div>
+                    <div class="item">有特殊傑出表現或貢獻者，由學務處另行酌予敘獎。</div>
+                    <div class="item">評鑑成績達八十分以上者依其排名至額滿，得優先分配社辦使用權利。</div>
+                </div>
+            <br /><br />
+            懲處方式：<br /><br />
+                <div class="ts ordered list">
+                    <div class="item">評鑑為丙等之社團，列入加強輔導，連續兩年丙等予以解散，一年內不得申請復社。</div>
+                    <div class="item">評鑑為丁等社團予以裁併或解散，一年內不得申請復社，負責人記一小過處分。</div>
+                    <div class="item">無故不參加評鑑者，該社團得簽請核定後解散，負責人依情節輕重，記兩小過處分。</div>
+                </div>
+            <br /><br />
+            本計畫呈校長核可後實施，修正時亦同。
+    
+        </div>
+        
+        <div class="ts modals dimmer">
+            <dialog id="closableModal" class="ts closable tiny modal">
+                <div class="content">
+                    <p>網頁尚在製作中。<br>This page is coming soon.</p>
+                </div>
+                <div class="actions">
+                    <button class="ts positive button">
+                        Got it.
+                    </button>
+                </div>
+            </dialog>
+        </div>
+        
+        <script type="text/javascript">
+    		var isIE = navigator.userAgent.search("MSIE") > -1; 
+        	var isIE7 = navigator.userAgent.search("MSIE 7") > -1; 
+        	if (isIE7) { 
+	    		document.location.href="anti-ie.html";
+        	} 
+        	if (isIE) { 
+	    		document.location.href="anti-ie.html";
+        	} 
+    	</script>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="ts fluid container">
+            <div class="ts fluid inverted segment">
+                <h2 class="ts center aligned inverted header">
+                    <span class="large device only">Linkou Senior High School</span>
+                <div class="sub header">Copyright © 2016-2017 LKSH. All Rights Reserved.</div>
+                </h2>
+            </div>
+        </div>
+    </footer>
+    </body>
+    </html>

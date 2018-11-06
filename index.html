@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+	<head>
+	    <meta charset="utf-8">
+	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    	<script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    	<link href="//fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" type="text/css">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+    	<link rel="stylesheet" type="text/css" href="https://herios.tw/lkca/club/styles/simplemde.min.css">
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+    	<script src="https://herios.tw/lkca/club/js/simplemde.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.2/handlebars.min.js"></script>
+        <script id="hr-template" type="text/x-handlebars-template">
+            <div class="ts card">
+            
+                <div class="image">
+                    <img src="{{cells.Image}}" />
+                </div>
+                
+                <div class="content">
+                    <div class="header">
+                        <details class="ts accordion">
+                            <summary>
+                                <h4 class="ts header">
+                                <i class="dropdown icon"></i>
+                                <div class="content">
+                                    {{cells.ClubName}}
+                                    <div class="sub header">{{cells.EngName}}</div>
+                                </div>
+                                </h4>
+                            </summary>
+                            <div class="content">
+                                <h4>簡介</h4><h6 class="ts secondary segment block header">{{cells.Intro}}</h6>
+                                <br /><h4>社課地點</h4><h6 class="ts secondary segment block header">{{cells.Place}}</h6>
+                                <br /><h4>指導老師</h4><h6 class="ts secondary segment block header">{{cells.Teacher}}</h6>
+                                <br /><h4>社長</h4><h6 class="ts secondary segment block header">{{cells.Leader}}</h6>
+                                <br /><h4>外部連結</h4><h6 class="ts secondary segment block header"><a target="_blank" href="{{cells.Link}}">{{cells.Link_Des}}</a></h6>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </script>
+		<title>社團介紹│新北市立林口高中</title>
+		<!-- RWD -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+        	.close.item
+			{
+			    display: none !important;
+			}
+			@media (max-width: 767px)
+			{
+			    .stackable.to.left .column{
+			        text-align: left !important;
+			    }
+			    .close.item{
+			        display: block !important;
+			    }
+			    #largeMainNav:not(.stackable){
+			        display: none;
+			    }
+			}
+        </style>
+        <script>$(function(){ ts('.ts.dropdown:not(.basic)').dropdown(); })</script>
+	</head>
+	
+	<body>
+		<!-- 置頂選單 -->
+        <nav id="largeMainNav" class="ts link inverted fluid large menu">
+            <!-- 縮排容器 -->
+            <div class="ts narrow container">
+                <!-- 主要標誌 -->
+                <a class="brand item" href="index.html">新北市立林口高中</a>
+                
+                <!-- 項目 -->
+                <a class="item" href="event.html">近期活動</a>
+                <div class="ts item dropdown">
+                    <div class="text">
+                        社團介紹
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item" href="index.html#academic">學術</a>
+                        <a class="item" href="index.html#art">藝文</a>
+                        <a class="item" href="index.html#pe">體育</a>
+                        <a class="item" href="index.html#kl">康樂</a>
+                        <a class="item" href="index.html#service">服務</a>
+                    </div>
+                </div>
+                <a class="item" href="evaluation.html">社團評鑑</a>
+                <a class="item" href="about.html">關於網頁</a>
+                <a class="item" href="http://lkca.com.tw">班聯會</a>
+                
+                <!-- 右側選單 -->
+                <div class="right menu">
+                    <a class="close item" onclick="collapseMenu()"><i class="close icon"></i>關閉選單</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- 手機專用置頂選單 -->
+	    <nav id="mobileMainNav" class="ts mobile only link inverted fluid large menu">
+	        
+	        <!-- 縮排容器 -->
+	        <div class="ts narrow container">
+	        
+	            <!-- 主要標誌 -->
+	            <a class="brand item" href="index.html">新北市立林口高中</a>
+	            <!-- / 主要標誌 -->
+	            
+	            <!-- 右側選單 -->
+	            <div class="right menu">
+	                
+	                <!-- 漢堡圖示 -->
+	                <a class="item" style="padding-left: 1em; padding-right: 1em; margin-right: -0.88rem;" onclick="expandMenu()"><i style="margin: 0" class="content icon"></i></a>
+	                <!-- / 漢堡圖示 -->
+	                
+	            </div>
+	            <!-- / 右側選單 -->
+	        
+	        </div>
+	        <!-- / 縮排容器 -->
+	        
+	    </nav>
+	    <!-- / 手機專用置頂選單 -->
+	    
+	    <!-- 選單腳本 -->
+	    <script>
+	        function expandMenu()
+	        {
+	            $('#largeMainNav').addClass('stackable');
+	            $('#mobileMainNav').addClass('hidden');
+	        }
+	        
+	        function collapseMenu()
+	        {
+	            $('#largeMainNav').removeClass('stackable');
+	            $('#mobileMainNav').removeClass('hidden');
+	        }
+	    </script>
+    	
+    	<header class="ts padded center aligned fluid slate">
+        	<h1 class="ts header">社團介紹</h1>
+    	</header>
+    	
+    	<!-- 縮排容器 -->
+        <br /><br />
+        <div class="ts narrow container">
+            
+        	<h1 class="ts fitted dividing header">學術</h1>
+        	<div class="ts stackable two cards" id="academic">
+        	</div>
+  
+        	<h1 class="ts fitted dividing header">藝文</h1>
+        	<div class="ts stackable two cards" id="art">
+        	</div>
+        	
+        	<h1 class="ts fitted dividing header">服務</h1>
+        	<div class="ts stackable two cards" id="service">
+        	</div>
+        	
+        	<h1 class="ts fitted dividing header">康樂</h1>
+        	<div class="ts stackable two cards" id="kl">
+        	</div>
+        	
+        	<h1 class="ts fitted dividing header">體育</h1>
+        	<div class="ts stackable two cards" id="pe">
+        	</div>
+        	
+        	<div class="ts secondary primary message">
+                <div class="header">資料補齊計畫需要你的幫忙！</div>
+                <p>未完善資料的社團，請來信至 mole7780@gmail.com ，提供社團簡介、社課地點、指導老師。<br>如有社團網頁或粉絲專頁請一併提供、若無則免填。</p>
+            </div>
+        </div>
+        
+        <div class="ts modals dimmer">
+            <dialog id="closableModal" class="ts closable tiny modal">
+                <div class="content">
+                    <p>網頁尚在製作中。<br>This page is coming soon.</p>
+                </div>
+                <div class="actions">
+                    <button class="ts positive button">
+                        Got it.
+                    </button>
+                </div>
+            </dialog>
+        </div>
+        
+	<br>
+    <br>
+    <br>
+    <footer>
+        <div class="ts fluid container">
+            <div class="ts fluid inverted segment">
+                <h2 class="ts center aligned inverted header">
+                    <span class="large device only">Linkou Senior High School</span>
+                <div class="sub header">Copyright © 2016-2017 LKSH. All Rights Reserved.</div>
+                </h2>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://herios.tw/lkca/club/js/main.js"></script>
+    </body>
+    </html>
