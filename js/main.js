@@ -1,4 +1,4 @@
-var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1LCYb598vVqFpLOOfhGjZtHgUgEMKPk5EWh8a_5Z_vlY/edit#gid=0';
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1-E0zuWrphWf16Onu_DfbWZleQCdWeaXolt8dl5_wQic/edit#gid=0';
 var HRTemplate = Handlebars.compile($('#hr-template').html());
 
 $('#academic').sheetrock({
