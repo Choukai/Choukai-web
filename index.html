@@ -12,8 +12,9 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.2/handlebars.min.js"></script>
         <script id="hr-template" type="text/x-handlebars-template">
-            <div class="ts card">
-            
+            <div class="ts cards">
+	    
+            	<div class="ts cards">
                 <div class="image">
                     <img src="{{cells.Image}}" />
                 </div>
@@ -40,6 +41,35 @@
                         </details>
                     </div>
                 </div>
+		
+		<div class="ts cards">
+                <div class="image">
+                    <img src="{{cells.Image}}" />
+                </div>
+                
+                <div class="content">
+                    <div class="header">
+                        <details class="ts accordion">
+                            <summary>
+                                <h4 class="ts header">
+                                <i class="dropdown icon"></i>
+                                <div class="content">
+                                    {{cells.ClubName}}
+                                    <div class="sub header">{{cells.EngName}}</div>
+                                </div>
+                                </h4>
+                            </summary>
+                            <div class="content">
+                                <h4>簡介</h4><h6 class="ts secondary segment block header">{{cells.Intro}}</h6>
+                                <br /><h4>社課地點</h4><h6 class="ts secondary segment block header">{{cells.Place}}</h6>
+                                <br /><h4>指導老師</h4><h6 class="ts secondary segment block header">{{cells.Teacher}}</h6>
+                                <br /><h4>社長</h4><h6 class="ts secondary segment block header">{{cells.Leader}}</h6>
+                                <br /><h4>外部連結</h4><h6 class="ts secondary segment block header"><a target="_blank" href="{{cells.Link}}">{{cells.Link_Des}}</a></h6>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+		
             </div>
         </script>
 		<title>社團介紹│新北市立林口高中</title>
