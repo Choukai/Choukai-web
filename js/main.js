@@ -1,4 +1,4 @@
-var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/2PACX-1vRu9eZQo27uJ4EO17aU-i1zd1dXk1VQulrX7NyScKAy13sQOpeziLUpUyc5nau3f97aJ5oOtp7ZCHpn/edit#gid=0';
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1-E0zuWrphWf16Onu_DfbWZleQCdWeaXolt8dl5_wQic/edit#gid=0';
 var HRTemplate = Handlebars.compile($('#hr-template').html());
 
 $('#academic').sheetrock({
